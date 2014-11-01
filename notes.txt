@@ -1,0 +1,32 @@
+A good grid system has 4 important elements:
+-container
+-rows
+-columns
+-gutters -- space between each column
+
+100 - (# of gutters * width of each gutter) = x
+
+(100-x) / (# of columns) = width of each column
+
+
+Psuedo-Elements
+-used to specify parts of an element
+Ex:
+p:first-line {
+	color:red;
+}
+
+makes the first line of a p element red.
+
+:before, :after
+-places stuff before/after specfied elements
+
+
+10/25 Meeting with Kyle:
+nav-bar issue:
+apply float:left to top-nav and make width 100%
+
+10/30
+position:relative/fixed
+
+fixed - setting position of an element regardless of those around it. hardcoding position.

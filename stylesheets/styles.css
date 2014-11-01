@@ -1,0 +1,342 @@
+*, *:before, *:after {
+  box-sizing:border-box;
+}
+
+body {
+  background-color: #636A6C;
+}
+
+.grid {
+  width:100%;
+}
+        /*includes all classes that contain "-col" in the name */
+.grid, .row, [class*="-col"] {
+  padding:0;
+  margin:0;
+}
+
+.grid:after, .row:after {
+  content:"";
+  display:table;
+  clear:both;
+}
+
+/* spacing between rows */
+.row {
+  margin-bottom:1em;
+}
+
+/* the last row does not need a bottom margin */
+/* no spacing needed on bottom of last row */
+.row:last-child{
+  margin-bottom:0;
+}
+
+/* sets up the columns. each gutter is 1.5%, the last one with no gutter */
+[class*="-col"] {
+  float:left;
+  margin-right:1.5%;
+}
+
+[class*="-col"]:last-child {
+  margin-right:0;
+}
+
+/*set width of each column to span */
+.one-col {
+  width:6.958%;
+}
+
+.two-col {
+  width:15.41%;
+}
+
+.three-col {
+  width:23.87%;
+}
+
+.four-col {
+  width:32.33%;
+}
+
+.five-col {
+  width:40.79%;
+}
+
+.six-col {
+  width:49.25%;
+}
+
+.seven-col {
+  width:57.70%;
+}
+
+.eight-col {
+  width:66.16%;
+}
+
+.nine-col {
+  width:74.62%;
+}
+
+.ten-col {
+  width:83.08%;
+}
+
+.eleven-col {
+  width:91.54%;
+}
+
+.twelve-col {
+  width:100%;
+}
+
+/*----Offsets --*/
+.one-offset {
+  margin-left: 8.458%;
+}
+
+.two-offset {
+  margin-left: 16.91%;
+}
+
+.three-offset {
+  margin-left: 25.37%;
+}
+
+.four-offset {
+  margin-left: 33.83%;
+}
+
+.five-offset {
+  margin-left: 42.29%;
+}
+
+.six-offset {
+  margin-left: 50.75%;
+}
+
+.seven-offset {
+  margin-left: 59.20%;
+}
+
+.eight-offset {
+  margin-left: 67.66%;
+}
+
+.nine-offset {
+  margin-left: 76.12%;
+}
+
+.ten-offset {
+  margin-left: 84.58%;
+}
+
+.eleven-offset {
+  margin-left: 91.54%;
+}
+
+/*------------------------------------*/
+[class*="-col"] {
+  border-width:1px;
+  border-style:solid;
+  border-color:black;
+  /*background-color:grey;*/
+
+  position: relative;
+}
+
+/*---Media Queries ---*/
+/*each column is like a row now */
+/* each new row will have 100% width */
+/* 768 px is typically the width of iPads */
+@media all and (max-width: 768px) {
+  [class*="-col"] {
+    width: 100%;
+    margin-bottom: 1em;
+  }
+
+  .row:last-child > [class*="-col"]:last-child {
+    margin-bottom: 0;
+  }
+
+  [class*="-offset"] {
+    margin-left: 0em;
+  }
+
+  .row {
+    margin: 0em;
+  }
+
+  /* make the question menu disappear (shift all the way to the left)*/
+  .row .questions {
+    position: absolute;
+    left: -780px;
+  }
+
+  .top-nav .hamburger{
+    display: inline-block;
+    float:left;
+  }
+
+}
+
+/*Media Query to set the hamburger to disappear when min width is 769 */
+@media all and (min-width: 769px) {
+  .top-nav .hamburger{
+    display: none;
+  }
+}
+
+/*----------added by CB ---- */
+.grid {
+  max-width:1080px;
+}
+
+.top-nav {
+  float:left;
+  width:100%;
+  background-color: rgba(95,118, 133,0.8);
+  margin-top: 0em;
+  margin-bottom: 1em;
+}
+
+.top-nav .social-nav > li {
+  display: inline-block;
+  float: right;
+  margin-left: 2em;
+  margin-top: 0em;
+}
+
+.top-nav .social-nav a{
+  color: white;
+}
+
+.top-nav .social-nav a:hover{
+  color: #ffeb00;
+}
+
+.top-nav .logo {
+  float: left;
+  margin-right: 2em;
+}
+
+.questions .question_list {
+  list-style: decimal;
+}
+
+.questions .question-title {
+  height: 220px;
+  padding-top: 0.5em;
+  padding-left: 0.2em;
+  background-color: #ffeb00;
+  font-family: Alright, sans-serif;
+}
+
+.questions .question-title h4 {
+  font-family: Balto, sans-serif;
+  font-weight: 700;
+  font-size: 1.6em;
+  line-height: 1.1;
+}
+
+.questions .question-title p {
+  font-size: 0.75em;
+}
+
+/* Note for links, a:link selector is used for
+text decoration, but just a for font color */
+.questions .question-title a:link {
+  text-decoration: none;
+}
+
+.questions .question-title a {
+  color: #6d98a8;
+}
+
+.questions .mars-questions .question_list {
+  margin-top: 0em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  height: 300px;
+  overflow-y:auto;
+}
+
+.questions .question_list > li {
+  font-family: Alright, sans-serif;
+  margin-bottom: 1em;
+}
+
+.question_list a:link {
+  text-decoration: none;
+}
+
+.question_list a {
+  color: #aaa;
+}
+
+.questions .mars-questions {
+  background-color: #313131;
+  color:#666;
+}
+
+.questions .mars-questions .up-arrow, .down-arrow {
+  text-align: center;
+}
+
+.questions .mars-questions .up-arrow {
+  margin-top: 0em;
+}
+
+.questions .mars-questions .down-arrow {
+  margin-bottom: 0em;
+}
+
+.questions, .article {
+  position: relative;
+}
+
+.article {
+  background-color: white;
+  padding-bottom: 3em;
+  font-family: Alright Sans, sans-serif;
+}
+
+.article .card-nav {
+  background-color: #fff200;
+  height: 35px;
+  width: 100%;
+  text-align: center;
+  margin-top: 0em;
+  display: inline-block;
+  font-family: helvetica, arial, sans-serif;
+  font-size: 13px;
+}
+
+.article .card-nav .card-count::after {
+ content: ">";
+ float: right;
+}
+
+.article .card-nav .card-count::before {
+ content: "<";
+ float: left;
+}
+
+
+/*
+.article .card-count {
+  text-align: center;
+  
+  margin-top: 0em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+*/
+.article .moon_pic {
+  float: right;
+}
+
+.article .moon-article {
+  padding-left:1em;
+}
